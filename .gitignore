@@ -1,0 +1,5 @@
+/.env
+app/config.local.php
+vendor/
+/.idea
+*.log

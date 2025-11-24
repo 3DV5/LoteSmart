@@ -1,0 +1,21 @@
+-- Migration: create users and lotes tables
+CREATE DATABASE IF NOT EXISTS `lotesmart` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE `lotesmart`;
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(150) NOT NULL,
+  `email` VARCHAR(255) NOT NULL UNIQUE,
+  `password` VARCHAR(255) NOT NULL,
+  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS `lotes` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `codigo` VARCHAR(100) NOT NULL,
+  `descricao` VARCHAR(255),
+  `quantidade` INT DEFAULT 0,
+  `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
