@@ -1,0 +1,4 @@
+/* reuse login styles but allow extra spacing */
+.auth-wrap{max-width:520px;margin:28px auto}
+.auth-card{padding:22px}
+.auth-title{font-size:1.1rem;margin-bottom:10px}

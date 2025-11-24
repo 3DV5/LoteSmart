@@ -1,0 +1,6 @@
+.lotes-list{max-width:1000px;margin:6px auto}
+.lotes-list table{width:100%;border-collapse:collapse;background:var(--card);border-radius:8px;overflow:hidden}
+.lotes-list th, .lotes-list td{padding:12px 14px;border-bottom:1px solid #eef2f6}
+.lotes-list thead th{background:#fbfdff;font-weight:700}
+.lotes-list tr:hover td{background:linear-gradient(90deg, rgba(0,102,204,0.02), transparent)}
+.small-muted{font-size:0.9rem;color:var(--muted)}

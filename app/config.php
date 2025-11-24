@@ -4,7 +4,7 @@ return [
     'db_host' => '127.0.0.1',
     'db_name' => 'lotesmart',
     'db_user' => 'root',
-    'db_pass' => 'secret',
+    'db_pass' => '',
     // base_url is used to build links, keep as `/` if serving from document root
     'base_url' => '/',
 ];

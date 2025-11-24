@@ -1,11 +1,11 @@
 <?php
-require_once __DIR__ . '/../app/init.php';
+require_once __DIR__ . '/app/init.php';
 
 $route = isset($_GET['r']) ? $_GET['r'] : 'dashboard';
 
 function render($template, $data = []) {
     extract($data);
-    include __DIR__ . '/../templates/layout.php';
+    include __DIR__ . '/templates/layout.php';
 }
 
 // simple routing

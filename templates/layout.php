@@ -1,18 +1,24 @@
 <?php
-$base = '/';
+$base = dirname($_SERVER['SCRIPT_NAME']);
+if ($base === '/' || $base === '\\' || $base === '.') {
+    $base = '';
+}
 ?>
 <!doctype html>
 <html>
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>LoteSmart</title>
-  <style>
-    body{font-family:Arial,Helvetica,sans-serif;max-width:900px;margin:20px auto;padding:10px}
-    .nav{margin-bottom:20px}
-    .nav a{margin-right:10px}
-    .error{color:#b00}
-  </style>
- </head>
+  <link rel="stylesheet" href="<?= $base ?>/assets/css/base.css">
+  <?php
+  $pageCss = __DIR__ . '/../assets/css/' . $template . '.css';
+  if (isset($template) && file_exists($pageCss)) {
+      $href = $base . '/assets/css/' . $template . '.css';
+      echo '<link rel="stylesheet" href="' . $href . '">';
+  }
+  ?>
+</head>
 <body>
   <div class="nav">
     <?php if (isset($_SESSION['user_id'])): ?>
